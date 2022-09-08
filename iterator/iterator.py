@@ -9,3 +9,6 @@ class Iterator(metaclass=ABCMeta):
     @abstractclassmethod
     def next(self):
         pass
+
+class IteratorIF():
+    pass
