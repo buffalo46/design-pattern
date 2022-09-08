@@ -1,10 +1,11 @@
-# original: https://saruhei1989.hatenablog.com/entry/2019/04/07/114832
+from pydantic import BaseModel
 
-class Book(object):
-    def __init__(self, name):
-        self.name = name
+from ..common.custom_pydantic.config import BaseFrozenConfig
 
-    def get_name(self):
-        return self.name
+class Book(BaseModel):
+    name: str
+
+    class Config(BaseFrozenConfig):
+        pass
 
 
